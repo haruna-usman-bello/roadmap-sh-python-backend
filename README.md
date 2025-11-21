@@ -7,7 +7,6 @@ Building my way through **[roadmap.sh Python projects](https://roadmap.sh/projec
 | # | Status         | Icon | Meaning                  |
 |---|----------------|------|--------------------------|
 | 1 | Not Started    | ⏳   | Haven’t touched it yet   |
-| 2 | Planned        | 📝   | On the to-do list        |
 | 3 | In Progress    | 🔄   | Actively working on it   |
 | 4 | Done           | ✅   | Completed & deployed     |
 
