@@ -16,6 +16,12 @@ def task_file_load():
         return []
 
 
+def save_tasks():
+    """Write the current tasks to the tasks.json file."""
+    with open('tasks.json', 'w', encoding='utf-8') as file:
+        json.dump(tasks, file, indent=2)
+
+
 tasks = task_file_load()
 
 
@@ -27,10 +33,8 @@ def add_task(description):
     new_task = {'id': len(tasks) + 1, 'description': description,
                 'status': status, 'created_at': created_at, 'updated_at': updated_at}
     tasks.append(new_task)
-
-    with open('tasks.json', 'w', encoding='utf-8') as file:
-        json.dump(tasks, file, indent=2)
-        print(f"Task added successfully: (ID: {new_task['id']})")
+    save_tasks()
+    print(f"Task added successfully: (ID: {new_task['id']})")
 
 
 def list_tasks():
@@ -39,8 +43,8 @@ def list_tasks():
     if not tasks:
         print("No tasks found.")
         return
-
     for task in tasks:
+
         print(f"ID: {task['id']}, Description: {task['description']}, Status: {task['status']}, Created At: {task['created_at']}, Updated At: {task['updated_at']}")
 
 
@@ -50,9 +54,34 @@ def update_task(task_id, description):
         if task['id'] == task_id:
             task['description'] = description
             task['updated_at'] = str(datetime.now())
-            with open('tasks.json', 'w', encoding='utf-8') as file:
-                json.dump(tasks, file, indent=2)
-                print(f"Task (ID: {task_id}) updated successfully.")
+            save_tasks()
+            print(f"Task (ID: {task_id}) updated successfully.")
+            return
+    print(f"Task with ID {task_id} not found.")
+
+
+def delete_task(task_id):
+    """Delete a task from the tracker."""
+    for task in tasks:
+        if task['id'] == task_id:
+            tasks.remove(task)
+            save_tasks()
+            print(f"Task (ID: {task_id}) deleted successfully.")
+            return
+    print(f"Task with ID {task_id} not found.")
+
+
+def mark_task(task_id, status):
+    """Mark a task with a new status."""
+    if status not in STATUS_OPTIONS:
+        print(f"Invalid status. Choose from: {', '.join(STATUS_OPTIONS)}")
+        return
+    for task in tasks:
+        if task['id'] == task_id:
+            task['status'] = status
+            task['updated_at'] = str(datetime.now())
+            save_tasks()
+            print(f"Task (ID: {task_id}) marked as {status} successfully.")
             return
     print(f"Task with ID {task_id} not found.")
 
@@ -62,7 +91,11 @@ def main():
     command = ''
     while command != 'exit':
         user_command = input("task-cli ")
-        command = re.match(r'\S+', user_command).group(0)
+        try:
+            command = re.match(r'\S+', user_command).group(0).lower()
+        except AttributeError:
+            print("Please enter a command.")
+            continue
         if command not in COMMANDS:
             print("Unknown command. Please try any of the following commands: add, update, delete, list, mark, exit")
         if command == 'add':
@@ -81,7 +114,31 @@ def main():
             task_id = int(items[0])
             description = items[1].strip('"\'')
             update_task(task_id, description)
+        elif command == 'delete':
+            try:
+                task_id = int(user_command[len(f'{command} '):].strip())
+            except ValueError:
+                print("Please provide a valid task ID.")
+                continue
+            delete_task(task_id)
+        elif command == 'mark':
+            items = user_command[len(f'{command} '):].split(' ', 1)
+            if len(items) < 2:
+                print("Please provide both task ID and status.")
+                continue
+            try:
+                task_id = int(items[1])
+            except ValueError:
+                print("Please provide a valid task ID.")
+                continue
+            status = items[0].strip()
+            mark_task(task_id, status)
+
+    print("Exiting Task Tracker CLI. Goodbye!")
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\nExiting Task Tracker CLI. Goodbye!")

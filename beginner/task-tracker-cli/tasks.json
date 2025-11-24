@@ -1,58 +1,23 @@
 [
   {
     "id": 1,
-    "description": "Buy new printers",
-    "status": "todo",
-    "created_at": "2025-11-21 16:13:45.816251",
-    "updated_at": "2025-11-24 08:34:10.905431"
+    "description": "buy me bread",
+    "status": "done",
+    "created_at": "2025-11-24 09:24:45.206979",
+    "updated_at": "2025-11-24 09:30:25.551219"
   },
   {
     "id": 2,
-    "description": "Updated list 2",
+    "description": "kfk",
     "status": "todo",
-    "created_at": "2025-11-21 16:15:29.942661",
-    "updated_at": "2025-11-24 08:42:16.445557"
+    "created_at": "2025-11-24 09:45:59.317658",
+    "updated_at": "2025-11-24 09:45:59.317803"
   },
   {
     "id": 3,
-    "description": "Buy drinks",
+    "description": "updated the list",
     "status": "todo",
-    "created_at": "2025-11-21 16:19:11.478083",
-    "updated_at": "2025-11-21 16:19:11.478111"
-  },
-  {
-    "id": 4,
-    "description": "Buy groceries",
-    "status": "todo",
-    "created_at": "2025-11-21 16:40:50.618489",
-    "updated_at": "2025-11-21 16:40:50.618960"
-  },
-  {
-    "id": 5,
-    "description": "",
-    "status": "todo",
-    "created_at": "2025-11-24 08:06:14.786139",
-    "updated_at": "2025-11-24 08:06:14.786286"
-  },
-  {
-    "id": 6,
-    "description": "Buy an Iphone 17 Pro Max",
-    "status": "todo",
-    "created_at": "2025-11-24 08:06:42.946287",
-    "updated_at": "2025-11-24 08:06:42.946312"
-  },
-  {
-    "id": 7,
-    "description": "buy",
-    "status": "todo",
-    "created_at": "2025-11-24 08:20:19.649065",
-    "updated_at": "2025-11-24 08:20:19.649101"
-  },
-  {
-    "id": 8,
-    "description": "",
-    "status": "todo",
-    "created_at": "2025-11-24 08:44:55.661564",
-    "updated_at": "2025-11-24 08:44:55.661598"
+    "created_at": "2025-11-24 09:46:18.396732",
+    "updated_at": "2025-11-24 09:46:18.396753"
   }
 ]
