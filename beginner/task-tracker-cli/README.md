@@ -2,10 +2,6 @@
 
 A simple command-line application built with Python to efficiently manage your daily tasks. This tool allows you to add, update, delete, and track the status of your tasks directly from your terminal. All tasks are saved locally in a `tasks.json` file.
 
-## Project URL
-
-<https://roadmap.sh/projects/task-tracker>
-
 ## Features
 
 - **Add Tasks**: Quickly add new tasks with a description.
@@ -24,7 +20,13 @@ A simple command-line application built with Python to efficiently manage your d
 
 ### Installation
 
-No installation is required. Simply ensure the project files (`app.py`, `task_tracker.py`) are in the same directory.
+To install Task-Tracker, follow these steps:
+
+**Clone** this project via git:
+
+```code
+https://github.com/haruna-usman-bello/roadmap-sh-python-backend/tree/main/beginner/task-tracker-cli
+```
 
 ### Running the Application
 
