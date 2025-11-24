@@ -1,12 +1,5 @@
 [
   {
-    "id": 1,
-    "description": "buy me bread",
-    "status": "done",
-    "created_at": "2025-11-24 09:24:45.206979",
-    "updated_at": "2025-11-24 09:30:25.551219"
-  },
-  {
     "id": 2,
     "description": "kfk",
     "status": "todo",
@@ -16,8 +9,22 @@
   {
     "id": 3,
     "description": "updated the list",
-    "status": "todo",
+    "status": "done",
     "created_at": "2025-11-24 09:46:18.396732",
-    "updated_at": "2025-11-24 09:46:18.396753"
+    "updated_at": "2025-11-24 11:07:32.531716"
+  },
+  {
+    "id": 3,
+    "description": "buy",
+    "status": "todo",
+    "created_at": "2025-11-24 11:06:40.516823",
+    "updated_at": "2025-11-24 11:06:40.516860"
+  },
+  {
+    "id": 4,
+    "description": "nill",
+    "status": "done",
+    "created_at": "2025-11-24 11:07:16.268043",
+    "updated_at": "2025-11-24 11:12:32.974830"
   }
 ]
