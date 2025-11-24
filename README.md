@@ -14,7 +14,7 @@ Building my way through **[roadmap.sh Python projects](https://roadmap.sh/projec
 
 | # | Difficulty    | Completed | Total | Progress |
 |---|---------------|-----------|-------|----------|
-| 1 | Beginner      | 0/12      | 12    | ⏳       |
+| 1 | Beginner      | 1/12      | 12    | 🔄       |
 | 2 | Intermediate  | 0/7       | 7     | ⏳       |
 | 3 |Advanced       | 0/4       | 4     | ⏳       |
 
@@ -25,7 +25,7 @@ Building my way through **[roadmap.sh Python projects](https://roadmap.sh/projec
 
 | # | Project Name        | Description                             |          Level          |               Stack               |         Live Demo         | Status |
 |---|---------------------|-----------------------------------------|-------------------------|-----------------------------------|---------------------------|--------|
-| 1 | Task Tracker        |CLI tool to manage to-do tasks: add, update, delete, mark as todo/in-progress/done. Tasks persisted in a JSON file.|         Beginner        |        Python (native fs/json)    |         -                  |   ⏳   |
+| 1 | Task Tracker        |CLI tool to manage to-do tasks: add, update, delete, mark as todo/in-progress/done. Tasks persisted in a JSON file.|         Beginner        |        Python (native fs/json)    |         -                  |   🔄   |
 | … | 22 more coming… | - | - | - | - | ⏳ |
 
 **Goal:** Complete **every single roadmap.sh project** with a strong Python + Backend focus  
