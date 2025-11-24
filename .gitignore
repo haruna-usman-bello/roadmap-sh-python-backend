@@ -5,6 +5,7 @@ __pycache__/
 
 # Project-specific 
 beginner/task-tracker-cli/tasks.json
+beginner/task-tracker-cli/__pycache__/
 
 # C extensions
 *.so
