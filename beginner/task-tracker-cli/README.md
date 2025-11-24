@@ -2,6 +2,10 @@
 
 A simple command-line application built with Python to efficiently manage your daily tasks. This tool allows you to add, update, delete, and track the status of your tasks directly from your terminal. All tasks are saved locally in a `tasks.json` file.
 
+## Project URL
+
+<https://roadmap.sh/projects/task-tracker>
+
 ## Features
 
 - **Add Tasks**: Quickly add new tasks with a description.
