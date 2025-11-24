@@ -7,6 +7,7 @@ from task_tracker import TaskTracker
 def main():
     """Main function to run the CLI application"""
     tracker = TaskTracker()
+    tracker.show_avalible_flags()
     command = ''
     while command != 'exit':
         user_command = input("task-cli ")
@@ -55,6 +56,8 @@ def main():
                     continue
                 status = items[0].strip()
                 tracker.mark_task(task_id, status)
+            case 'help':
+                tracker.show_avalible_flags()
             case _:
                 print(
                     "Unknown command. Please try any of the following commands: add, update, delete, list, mark, exit")

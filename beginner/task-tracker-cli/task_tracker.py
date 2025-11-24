@@ -13,6 +13,23 @@ class TaskTracker:
     def __init__(self):
         self.tasks = self.load_tasks()
 
+    def show_avalible_flags(self) -> None:
+        """Display available command flags."""
+        print("A CLI application to efficiently manage your tasks\n")
+        print("Available commands:")
+        print("\tadd <str:description> - add new task to your tasks")
+        print(
+            "\tupdate <int:id> <str:description> - update task by id. Replace old to new description"
+        )
+        print("\tdelete <int:id> - delete task by id")
+        print("\tmark in-progress <int:id> - replace  status to in-progress")
+        print("\tmark done <int:id> - replace status to done")
+        print("\tlist - to print all tasks")
+        print("\tlist done - to print all tasks with status done")
+        print("\tlist todo - to print all tasks with status todo")
+        print("\tlist in-progress - to print all tasks with status in-progress")
+        print("\thelp - to print this help manual")
+
     def load_tasks(self) -> list:
         """Load tasks from the tasks.json file."""
         try:
