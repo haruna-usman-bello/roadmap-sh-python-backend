@@ -1,5 +1,30 @@
 """Expense Tracker CLI Application"""
+import json
+from pathlib import Path
 from argparse import ArgumentParser
+from typing import TypeAlias, TypedDict
+
+DatabaseRow = TypedDict(
+    'DatabaseRow',
+    {
+        'id': int,
+        'description': str,
+        'amount': float,
+        'category': str,
+        'date': str,
+    },
+)
+
+Database: TypeAlias = dict[str, list[DatabaseRow]]
+
+
+def load_database(path: Path) -> Database:
+    """Load the database from a JSON file"""
+    try:
+        with open(path, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {'expenses': []}
 
 
 def parse_args() -> ArgumentParser:
@@ -39,7 +64,12 @@ def main():
         if user_command in ('--help', '-h'):
             args.print_help()
             continue
+        print(
+            "Please enter a valid command. Type --help or -h to see all available commands.")
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\nExiting Expense Tracker CLI Application. Goodbye!")
